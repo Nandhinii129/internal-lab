@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Session Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box" id="loginBox">
+        <h2>User Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p id="msg"></p>
+        <p>New user? <a href="#" onclick="showRegister()">Create Account</a></p>
+    </div>
+
+    <div class="box" id="registerBox" hidden>
+        <h2>Create Account</h2>
+        <input type="text" id="newUser" placeholder="Create Username">
+        <input type="password" id="newPass" placeholder="Create Password">
+        <button onclick="register()">Register</button>
+        <p id="regMsg"></p>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div class="box" id="dashboard" hidden>
+        <h2>Welcome, <span id="displayUser"></span>!</h2>
+        <p>Login successful.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
